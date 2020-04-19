@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import Formulario from './componentes/Formulario'
 import axios from 'axios'
+import Cancion from './componentes/Cancion';
 function App() {
 
   const [ buscarletra, guardarBuscarLetra]= useState({});
@@ -26,6 +27,20 @@ function App() {
       <Formulario
         guardarBuscarLetra={guardarBuscarLetra}
       />
+      <div className="container mt-5">
+        <div className="row">
+          <div className="col-md-6"
+          >
+
+          </div>
+          <div className="col-md-6"
+          >
+              <Cancion
+              letra={letra}
+              />
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 }
